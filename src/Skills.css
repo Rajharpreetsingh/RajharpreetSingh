@@ -1,0 +1,30 @@
+/* Responsive image panel */
+.skill-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Prevent image content from overflowing */
+.p-accordion .p-accordion-content {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+/* Responsive panel sizing */
+.p-panel {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .skill-image {
+        width: 100%;
+        height: auto;
+    }
+}
