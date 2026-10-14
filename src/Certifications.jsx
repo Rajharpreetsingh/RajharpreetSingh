@@ -1,86 +1,48 @@
 import React from 'react';
-import { BlockUI } from 'primereact/blockui';
 import { Panel } from 'primereact/panel';
-import c1Image from './c1.png'; 
-import c2aImage from './c2-a.png'; 
-import c2bImage from './c2-b.png'; 
-import c3Image from './c3.png'; 
-import c4Image from './c4.png'; 
+import c1Image from './c1.png';
+import c2aImage from './c2-a.png';
+import c2bImage from './c2-b.png';
+import c3Image from './c3.png';
+import c4Image from './c4.png';
+import c6Image from './c6.jpg';
+import './Certifications.css';
+
+export default function Certifications() {
+const certificates = [
+{ id: 1, image: c1Image, title: 'Certificate 1', link: 'https://coursera.org/share/804e26db5bb59f8dcadc1207e3155d03' },
+{ id: 2, image: c2aImage, title: 'Certificate 2', link: 'https://www.coursera.org/account/accomplishments/certificate/NLG5DFDRKG89' },
+{ id: 3, image: c2bImage, title: 'Certificate 3', link: 'https://coursera.org/share/50e754343131de2f3cdc366bf85c2ac9' },
+{ id: 4, image: c3Image, title: 'Certificate 4', link: 'https://verify.onwingspan.com/' },
+{ id: 5, image: c4Image, title: 'Certificate 5', link: 'https://verify.onwingspan.com/' },
+{ id: 6, image: c6Image, title: 'Certificate 6', link: 'https://verify.onwingspan.com/' }
+];
 
 
-export default function Certifications()
-{
-    return(
-        <>
-         <center>
-            <h2>Certifcations</h2>
-         </center>
+return (
+    <div className="certifications-container">
+        <h2 className="certifications-heading">Certifications</h2>
 
-         <div className="card">
-                     <br></br>
-                      
-                     <BlockUI >
-                        
-                     <Panel header="Introduction to Object-Oriented Programming in C++, University of London"> 
-                 
-               <center>
-                     <a href="https://www.coursera.org/account/accomplishments/certificate/2W6VG46WPFJH">
-                     <img src={c1Image} style={{height:"80vh",width:"100vh"}}></img>
-                     </a>
-                   
-                </center>
-
-
-
-             
-                            
-                         </Panel>
-<Panel header="An Introduction to Interactive Programming in
-Python (Part 1)
-">
-
-            <center>
-     <a href="https://www.coursera.org/account/accomplishments/verify/NLG5DFDRKG89">
-     <img src={c2aImage} style={{height:"80vh",width:"100vh"}}></img>
-   </a>
-  </center>
-</Panel>
+        <div className="certifications-grid">
+            {certificates.map((certificate) => (
+                <Panel key={certificate.id} className="certificate-panel">
+                    <a
+                        href={certificate.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="certificate-link"
+                    >
+                        <img
+                            src={certificate.image}
+                            alt={certificate.title}
+                            className="certificate-image"
+                        />
+                    </a>
+                </Panel>
+            ))}
+        </div>
+    </div>
+);
 
 
-<Panel header="An Introduction to Interactive Programming in
-Python (Part 2)
-">
-
-<center>
-     <a href="https://www.coursera.org/account/accomplishments/verify/HUNYGFHN1XMN">
-     <img src={c2bImage} style={{height:"80vh",width:"100vh"}}></img>
-   </a>
-  </center>
-</Panel>      
-                        
-                        
-<Panel header="React JS Fundamentals | Infosys SpringBoard  (Click Certificate and Scan the QR Using Phone to verify)">
-    <center>
-     <a href="https://verify.onwingspan.com/">
-     <img src={c3Image} style={{height:"80vh",width:"100vh",border:"solid #B2B3B5 7px"}} ></img>
-   </a>
-        </center>  
-</Panel>
-
-
-<Panel header="Data Structures and Algorithms Fundamentals| Infosys SpringBoard  (Click Certificate and Scan the  QR Using Phone to verify)">
-  <center>
-     <a href="https://verify.onwingspan.com/">
-     <img src={c4Image} style={{height:"80vh",width:"100vh",border:"solid #B2B3B5 7px"}} ></img>
-   </a>
-       </center>   
-</Panel>
-
-
-         
-</BlockUI>
-          </div>
-
-        </>
-    )
 }

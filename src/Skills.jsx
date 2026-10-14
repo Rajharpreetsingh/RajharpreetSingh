@@ -1,6 +1,9 @@
 import { Accordion, AccordionTab } from 'primereact/accordion';
-
-
+import ps from "./ps.jpg";
+import ws from "./ws.jpg";
+import frs from "./frs.jpg";
+import tks from "./tks.jpg";
+import phps from "./phps.png";
 
 export default function Skills()
 {
@@ -16,33 +19,37 @@ export default function Skills()
      <div className="card">
             <Accordion activeIndex={null}>
                 <AccordionTab header="Programming Languages">
-                    <p className="m-0">
-                    C, C++, Java, Python, PHP, JavaScript
-                    </p>
+                    <img src={ps} style={{width:"54rem", height:"13rem"}}/>
+                    <p>
+                   C C++ JAVA PHP PYTHON JAVASCRIPT
+                  </p>
                 </AccordionTab>
                 <AccordionTab header="Desktop App Development">
-                    <p className="m-0">
-                       Tkinter, Custom Tkinter
-                    </p>
+                     <img src={tks} style={{width:"20rem", height:"5rem"}}/>
+                    <p>
+                  TKinter Custom Tkinter
+                  </p>
                 </AccordionTab>
                 <AccordionTab header="Web Technologies">
-                    <p className="m-0">
-                        
-                    HTML, CSS, JS 
-                    </p>
+                   <img src={ws} style={{width:"18rem", height:"10rem"}}/>
+                     <p>
+                       HTML   CSS  JavaScript
+                  </p>
                 </AccordionTab>
 
                    <AccordionTab header="Frontend">
-                    <p className="m-0">
-                        
-                     ReactJS, Bootstrap CSS, Tailwind CSS
-                    </p>
+                     
+                    <img src={frs} style={{width:"16rem", height:"8rem"}}/>
+                    <p>
+                  React  Bootstrap  Tailwind
+                  </p>
                 </AccordionTab>
 
                    <AccordionTab header="Backend">
-                    <p className="m-0">
+                    <img src={phps} style={{width:"14rem", height:"8rem"}}/>
+                     <p>
                     PHP
-                    </p>
+                  </p>
                 </AccordionTab>
 
             </Accordion>
