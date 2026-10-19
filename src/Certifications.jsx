@@ -6,6 +6,7 @@ import c2bImage from './c2-b.png';
 import c3Image from './c3.png';
 import c4Image from './c4.png';
 import c6Image from './c6.jpg';
+import c7Image from './c7.jpg';
 import './Certifications.css';
 
 export default function Certifications() {
@@ -15,7 +16,8 @@ const certificates = [
 { id: 3, image: c2bImage, title: 'Certificate 3', link: 'https://coursera.org/share/50e754343131de2f3cdc366bf85c2ac9' },
 { id: 4, image: c3Image, title: 'Certificate 4', link: 'https://verify.onwingspan.com/' },
 { id: 5, image: c4Image, title: 'Certificate 5', link: 'https://verify.onwingspan.com/' },
-{ id: 6, image: c6Image, title: 'Certificate 6', link: 'https://verify.onwingspan.com/' }
+{ id: 6, image: c6Image, title: 'Certificate 6', link: 'https://verify.onwingspan.com/' },
+{ id: 6, image: c7Image, title: 'Certificate 7', link: 'https://www.udemy.com/certificate/UC-e4d79775-f884-45df-b9f4-42ce09f7a8d6/' }
 ];
 
 
