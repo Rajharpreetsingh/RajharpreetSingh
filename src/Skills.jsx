@@ -49,7 +49,7 @@ return (
                 <AccordionTab header="Backend">
                     <Panel>
                         <img src={phps} className="skill-image" alt="Backend Technologies" />
-                        <p>PHP</p>
+                        <p>PHP , Node js</p>
                     </Panel>
                 </AccordionTab>
             </Accordion>
