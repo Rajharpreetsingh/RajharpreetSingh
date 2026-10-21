@@ -63,7 +63,7 @@ export default function HeroSection() {
             />
             <a href="https://drive.google.com/file/d/1FhjrNPzbKgzpM2D_2kwDi8F5EkbjEU61/view?usp=sharing">
             <Button 
-              label="Download CV" 
+              label="Download CV / Resume" 
               icon="pi pi-external-link" 
               severity="secondary" 
               outlined 
