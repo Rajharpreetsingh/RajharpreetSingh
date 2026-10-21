@@ -34,7 +34,7 @@ return (
                         <br></br>
                          
                         <BlockUI >
-                            <Panel header="About">
+                            <Panel header="Internship Experience">
                                 <p className="m-0">
                                  During my seven-week frontend internship at Bron24, a sports court booking app based in Tashkent, I gained hands-on experience building both mobile and web interfaces with React Native and React. I developed features such as a hold-timer countdown using `useEffect` with proper cleanup, a responsive login page, a stadium venue listing page with real-time search and filtering, and an admin panel with a sidebar dashboard. I then integrated these modules into a single React application using React Router v6 with protected routes and deployed it on Vercel. Along the way, I became comfortable with the professional development workflow, including Vite, Git, working in a shared company repository, and deploying to production. I also strengthened my professional skills by planning features in advance, collaborating with a teammate on a joint presentation, documenting my progress through weekly reports and a final report, and working to weekly deliverables under an industry supervisor. Overall, the internship helped me move from building isolated components to delivering a complete, deployed application, improving my skills in component design, state management, routing, and deployment.
                                 </p>
