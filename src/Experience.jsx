@@ -25,6 +25,7 @@ return (
             <a href={ic} target="_blank" rel="noopener noreferrer">
                 <img
                     src={ic}
+                    
                     alt="Bron24 Frontend Developer Internship Certificate"
                     className="internship-certificate"
                 />
@@ -35,7 +36,7 @@ return (
                         <BlockUI >
                             <Panel header="About">
                                 <p className="m-0">
-                                   I am Raj Harpreet Singh, a passionate software and game developer currently pursuing a Master of Computer Applications (MCA) with a focus on modern technologies and immersive experiences. I have a strong foundation in C/C++ and Python, along with practical experience in frontend development using HTML, CSS, and JavaScript. I enjoy building both CLI and GUI-based applications, as well as developing 2D and 3D games using tools like Unity. My work reflects my curiosity for problem-solving and my interest in creating interactive and engaging user experiences. I have also explored multiplayer systems using cloud-based solutions and continue to expand my skills in game mechanics and performance optimization. Beyond development, I have experience as a video editor intern, which has helped me develop a creative perspective and storytelling ability—skills that I often bring into my technical projects. I am highly motivated to grow as an AI/ML engineer and continuously strive to improve my skills through hands-on projects and consistent learning. I believe in mastering fundamentals first and using that mastery to create meaningful and innovative solutions.
+                                 During my seven-week frontend internship at Bron24, a sports court booking app based in Tashkent, I gained hands-on experience building both mobile and web interfaces with React Native and React. I developed features such as a hold-timer countdown using `useEffect` with proper cleanup, a responsive login page, a stadium venue listing page with real-time search and filtering, and an admin panel with a sidebar dashboard. I then integrated these modules into a single React application using React Router v6 with protected routes and deployed it on Vercel. Along the way, I became comfortable with the professional development workflow, including Vite, Git, working in a shared company repository, and deploying to production. I also strengthened my professional skills by planning features in advance, collaborating with a teammate on a joint presentation, documenting my progress through weekly reports and a final report, and working to weekly deliverables under an industry supervisor. Overall, the internship helped me move from building isolated components to delivering a complete, deployed application, improving my skills in component design, state management, routing, and deployment.
                                 </p>
                             </Panel>
                         </BlockUI>
