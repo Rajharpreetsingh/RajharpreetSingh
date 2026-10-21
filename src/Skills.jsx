@@ -163,7 +163,7 @@ const skills = [
     icon: "express/express-original.svg",
   },
   {
-    name: "Custom Tkinter",
+    name: "Tkinter",
     icon: "python/python-original.svg",
   },
   {
