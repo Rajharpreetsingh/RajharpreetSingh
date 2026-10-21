@@ -1,5 +1,6 @@
 import React from 'react';
 import { Panel } from 'primereact/panel';
+import PageTransition from './PageTransition';
 import c1Image from './c1.png';
 import c2aImage from './c2-a.png';
 import c2bImage from './c2-b.png';
@@ -26,6 +27,7 @@ const certificates = [
 
 
 return (
+     <PageTransition>
     <div className="certifications-container">
         <h2 className="certifications-heading">Certifications</h2>
 
@@ -48,6 +50,7 @@ return (
             ))}
         </div>
     </div>
+    </PageTransition>
 );
 
 

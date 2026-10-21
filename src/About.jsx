@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { BlockUI } from 'primereact/blockui';
+import PageTransition from './PageTransition';
 import { Panel } from 'primereact/panel';
 
 export default function TemplateDemo() {
     
 
     return (
-        
+        <PageTransition>
         <div className="card">
             <br></br>
              
@@ -19,6 +20,7 @@ export default function TemplateDemo() {
                 </Panel>
             </BlockUI>
         </div>
+        </PageTransition>
     );
 }
         

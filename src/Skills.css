@@ -69,7 +69,7 @@
   min-width: 0;
   height: 98px;
    
-  border-radius:1rem;
+  border-radius:0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;

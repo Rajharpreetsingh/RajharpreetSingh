@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "cdbreact": "^1.6.1",
+    "framer-motion": "^14.5.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.9",
     "react": "^19.2.8",

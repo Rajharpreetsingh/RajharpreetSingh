@@ -99,6 +99,7 @@
 // }
 
 import React from "react";
+import PageTransition from './PageTransition';
 import "./Skills.css";
 
 const skills = [
@@ -186,6 +187,7 @@ const skills = [
 
 const Skills = () => {
   return (
+    <PageTransition>
     <section className="skills-page">
       <div className="skills-container">
 
@@ -223,6 +225,7 @@ const Skills = () => {
 
       </div>
     </section>
+    </PageTransition>
   );
 };
 

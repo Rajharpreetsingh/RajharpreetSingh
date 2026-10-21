@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
+import PageTransition from './PageTransition';
 import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
 
   let navigate = useNavigate();
   return (
+     <PageTransition>
     <div style={{ 
       minHeight: '75vh', 
       display: 'flex', 
@@ -112,5 +114,6 @@ export default function HeroSection() {
 
       </div>
     </div>
+    </PageTransition>
   );
 }
