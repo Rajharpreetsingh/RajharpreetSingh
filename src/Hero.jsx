@@ -61,15 +61,16 @@ export default function HeroSection() {
               style={{ borderRadius: '6px' }}
               onClick={()=>navigate("/certifications")} 
             />
+            <a href="https://drive.google.com/file/d/1FhjrNPzbKgzpM2D_2kwDi8F5EkbjEU61/view?usp=sharing">
             <Button 
-              label="See Projects" 
+              label="Download CV" 
               icon="pi pi-external-link" 
               severity="secondary" 
               outlined 
               size="large"
               style={{ borderRadius: '6px' }}
-              onClick={()=>navigate("/projects")} 
             />
+            </a>
           </div>
         </div>
 

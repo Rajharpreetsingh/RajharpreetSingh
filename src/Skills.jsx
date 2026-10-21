@@ -181,7 +181,7 @@ const skills = [
   {
   name: "C-language",
   icon: "c/c-original.svg",
-  },
+  }
 ];
 
 const Skills = () => {
