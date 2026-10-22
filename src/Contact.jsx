@@ -1,57 +1,192 @@
+import React, { useState } from "react";
 
-import React from 'react';
-import { BlockUI } from 'primereact/blockui';
-import PageTransition from './PageTransition';
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
 
-import { Button } from 'primereact/button';
-        
-import { InputTextarea } from 'primereact/inputtextarea';
-        
-import { InputText } from 'primereact/inputtext';
-        
-import { Panel } from 'primereact/panel';
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-export default function TemplateDemo() {
-        // {/* <span>📞<strong>Phone Number:</strong>+91  9682599483</span>
-        //              <br/>
-        //              <br/>
-        //              <span>✉️ <strong>Email:</strong><a href="rajharpreetinki@gmail.com">rajharpreetinki@gmail.com</a></span>
-        //              <br/>
-        //              <br/>
-        //              <span>🏠<strong>Address:</strong>S 15, Rampur Road, Haldwani, Near Water Tank, Olivia Colony, VTC Dewalchore, PO Dewalchore, Sub-District Haldwani, District Nainital, Uttarakhand – 263139</span> */}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
 
-    return (
-         <PageTransition>
-        <div className="card">
-            <br></br>
-             
-            <BlockUI >
-                <Panel header="Contact me">
-                    <center>
-                    <form method="post" action="#">
-                        
-                             <InputText placeholder="Name"  />
-                             <br></br>
-                               <br></br>
-                            <InputText  placeholder="Email" />
+    try {
+      // Replace with your API endpoint or email service provider URL (e.g., Formspree, Formcarry)
+      const response = await fetch("https://web3forms.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_ACCESS_KEY_HERE", // If using Web3Forms, Formspree, etc.
+          ...formData,
+        }),
+      });
 
-                            <br></br>
-                                <br></br>
-                             
-                            <InputTextarea  rows={5} cols={30} />
-                              <br></br>
-                                <br></br>
-                               <Button label="Send" />
-                            
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
 
-                     </form>  
-                     </center>   
-                </Panel>
-                
-
-            </BlockUI>
+  return (
+    <div style={styles.container}>
+      <h2 style={styles.title}>Contact Me</h2>
+      
+      {status === "success" && (
+        <div style={{ ...styles.alert, ...styles.successAlert }}>
+          Thank you! Your message has been sent successfully.
         </div>
-        </PageTransition>
-    );
+      )}
+      
+      {status === "error" && (
+        <div style={{ ...styles.alert, ...styles.errorAlert }}>
+          Something went wrong. Please try again.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} style={styles.form}>
+        <div style={styles.formGroup}>
+          <label htmlFor="name" style={styles.label}>Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            style={styles.input}
+            placeholder="your name"
+          />
+        </div>
+
+        <div style={styles.formGroup}>
+          <label htmlFor="email" style={styles.label}>Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            style={styles.input}
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div style={styles.formGroup}>
+          <label htmlFor="message" style={styles.label}>Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="5"
+            style={styles.textarea}
+            placeholder="Type your message here..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          style={status === "loading" ? { ...styles.button, ...styles.buttonDisabled } : styles.button}
+        >
+          {status === "loading" ? "Sending..." : "Send Message"}
+        </button>
+      </form>
+    </div>
+  );
 }
-        
+
+const styles = {
+  container: {
+    maxWidth: "500px",
+    margin: "2rem auto",
+    padding: "2rem",
+    fontFamily: "system-ui, -apple-system, sans-serif",
+    backgroundColor: "#ffffff",
+    borderRadius: "8px",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+  },
+  title: {
+    marginBottom: "1.5rem",
+    color: "#333333",
+    fontSize: "1.75rem",
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.25rem",
+  },
+  formGroup: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.5rem",
+  },
+  label: {
+    fontSize: "0.9rem",
+    fontWeight: "600",
+    color: "#4a5568",
+  },
+  input: {
+    padding: "0.75rem",
+    fontSize: "1rem",
+    border: "1px solid #cbd5e1",
+    borderRadius: "6px",
+    outline: "none",
+  },
+  textarea: {
+    padding: "0.75rem",
+    fontSize: "1rem",
+    border: "1px solid #cbd5e1",
+    borderRadius: "6px",
+    outline: "none",
+    resize: "vertical",
+  },
+  button: {
+    padding: "0.75rem",
+    fontSize: "1rem",
+    fontWeight: "600",
+    color: "#ffffff",
+    backgroundColor: "#6366F1",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    transition: "background-color 0.2s",
+  },
+  buttonDisabled: {
+    backgroundColor: "#93c5fd",
+    cursor: "not-allowed",
+  },
+  alert: {
+    padding: "1rem",
+    borderRadius: "6px",
+    marginBottom: "1.25rem",
+    fontSize: "0.95rem",
+  },
+  successAlert: {
+    backgroundColor: "#dcfce7",
+    color: "#166534",
+    border: "1px solid #bbf7d0",
+  },
+  errorAlert: {
+    backgroundColor: "#fee2e2",
+    color: "#991b1b",
+    border: "1px solid #fecaca",
+  },
+};

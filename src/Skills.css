@@ -68,7 +68,7 @@
 .skill-card {
   min-width: 0;
   height: 98px;
-   
+
   border-radius:0.5rem;
   display: flex;
   flex-direction: column;
