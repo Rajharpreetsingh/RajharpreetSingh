@@ -1,4 +1,4 @@
-import ic from "./ic.jpg";
+import ic from "./images/ic.jpg";
 import "./Experience.css";
 import { BlockUI } from 'primereact/blockui';
 import PageTransition from './PageTransition';

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Panel } from 'primereact/panel';
 import PageTransition from './PageTransition';
-import c1Image from './c1.png';
-import c2aImage from './c2-a.png';
-import c2bImage from './c2-b.png';
-import c3Image from './c3.png';
-import c4Image from './c4.png';
-import c6Image from './c6.jpg';
-import c7Image from './c7.jpg';
-import c8Image from './c8.jpg';
-import c9Image from './c9.jpg';
+import c1Image from './images/c1.png';
+import c2aImage from './images/c2-a.png';
+import c2bImage from './images/c2-b.png';
+import c3Image from './images/c3.png';
+import c4Image from './images/c4.png';
+import c6Image from './images/c6.jpg';
+import c7Image from './images/c7.jpg';
+import c8Image from './images/c8.jpg';
+import c9Image from './images/c9.jpg';
 import './Certifications.css';
 
 export default function Certifications() {
