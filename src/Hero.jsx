@@ -41,7 +41,7 @@ export default function HeroSection() {
           }}>
             Hi, I'am  <span style={{ color: '#6366f1' }}>Rajharpreet Singh</span>
             <br></br>
-            Aspiring Software Engineer
+            Aspiring FullStack Developer
           </h1>
           
           <p style={{ 
