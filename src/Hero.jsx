@@ -3,10 +3,15 @@ import { Button } from 'primereact/button';
 import { Badge } from 'primereact/badge';
 import PageTransition from './PageTransition';
 import { useNavigate } from "react-router-dom";
+import "./hero.css"
+import {motion} from "motion/react";
+
 
 export default function HeroSection() {
 
   let navigate = useNavigate();
+
+  
   return (
      <PageTransition>
     <div style={{ 
@@ -40,7 +45,7 @@ export default function HeroSection() {
             letterSpacing: '-0.02em'
           }}>
             Hi, I'am  <span style={{ color: '#6366f1' }}>Rajharpreet Singh</span>
-            <br></br>
+            <br/>
            FullStack Developer
           </h1>
           
@@ -55,13 +60,19 @@ export default function HeroSection() {
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+            
             <Button 
+             initial={{opacity:0}}
+               animate={{opacity:1}}
+               transition={{duration:0.8}}
+              
               label="See certifications" 
               icon="pi pi-compass" 
               severity="primary" 
               size="large"
               style={{ borderRadius: '6px' }}
               onClick={()=>navigate("/certifications")} 
+              className="btns"
             />
             <a href="https://drive.google.com/file/d/1FhjrNPzbKgzpM2D_2kwDi8F5EkbjEU61/view?usp=sharing">
             <Button 
@@ -71,6 +82,7 @@ export default function HeroSection() {
               outlined 
               size="large"
               style={{ borderRadius: '6px' }}
+              className="btns"
             />
             </a>
           </div>
