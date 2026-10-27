@@ -1,6 +1,7 @@
 import ic from "./images/ic.jpg";
-import "./Experience.css";
+import "./Styles/Experience.css";
 import { BlockUI } from 'primereact/blockui';
+import {motion} from "motion/react";
 import PageTransition from './PageTransition';
 import { Panel } from 'primereact/panel';
 
@@ -22,14 +23,20 @@ return (
         <br />
 
         <center>
-            <a href={ic} target="_blank" rel="noopener noreferrer">
+              <motion.div 
+                     initial={{opacity:0,y:-200}}
+                     animate={{opacity:1,y:0}}
+                     transition={{duration:1}}
+                      >
+            <a href={ic} >
                 <img
                     src={ic}
                     
-                    alt="Bron24 Frontend Developer Internship Certificate"
+                    
                     className="internship-certificate"
                 />
             </a>
+             </motion.div>
              <div className="card">
                         <br></br>
                          

@@ -10,7 +10,7 @@ import c6Image from './images/c6.jpg';
 import c7Image from './images/c7.jpg';
 import c8Image from './images/c8.jpg';
 import c9Image from './images/c9.jpg';
-import './Certifications.css';
+import './Styles/Certifications.css';
 
 export default function Certifications() {
 const certificates = [

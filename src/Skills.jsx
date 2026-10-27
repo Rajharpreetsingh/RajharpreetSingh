@@ -100,7 +100,7 @@
 
 import React from "react";
 import PageTransition from './PageTransition';
-import "./Skills.css";
+import "./Styles/Skills.css";
 
 const skills = [
   {
