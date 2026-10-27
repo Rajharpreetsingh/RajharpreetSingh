@@ -22,7 +22,21 @@ export default function TemplateDemo() {
         }}>
         
           
-        <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center"}}>
+        
+            
+        </div>
+
+         
+         <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center",marginTop:"2rem"}}>
+              <h3>About Me </h3>
+        </div>
+         
+         <motion.div 
+         initial={{opacity:0}}
+         animate={{opacity:1}}
+         transition={{duration:2}}
+          >
+         <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center"}}>
              <motion.div 
          initial={{opacity:0,y:-200}}
          animate={{opacity:1,y:0}}
@@ -35,19 +49,6 @@ export default function TemplateDemo() {
 
          </div>
            
-            
-        </div>
-         
-         <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center",marginTop:"2rem"}}>
-              <h3>About Me </h3>
-        </div>
-         
-         <motion.div 
-         initial={{opacity:0}}
-         animate={{opacity:1}}
-         transition={{duration:2}}
-          >
-         
         <div className="card">
         
              

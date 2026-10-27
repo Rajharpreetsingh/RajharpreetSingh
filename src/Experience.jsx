@@ -23,19 +23,13 @@ return (
         <br />
 
         <center>
-              <motion.div 
+            <motion.div 
                      initial={{opacity:0,y:-200}}
                      animate={{opacity:1,y:0}}
                      transition={{duration:1}}
                       >
-            <a href={ic} >
-                <img
-                    src={ic}
-                    
-                    
-                    className="internship-certificate"
-                />
-            </a>
+            <img src="https://media.licdn.com/dms/image/v2/D562DAQEomPWbhuVbmw/profile-treasury-image-shrink_1280_1280/B56aF.9fIsIAAY-/0/1793131411393?e=1793739600&v=beta&t=sxS3eDJ6_J8NUf6WvlfooNQTkYOKsAQBCYpv0wh20Ak" className="internship-certificate"/>
+             
              </motion.div>
              <div className="card">
                         <br></br>
