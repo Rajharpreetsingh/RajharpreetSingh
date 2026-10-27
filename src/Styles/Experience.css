@@ -1,22 +1,35 @@
+
 .internship-certificate {
     display: block;
-    border-radius:0.28rem;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    max-height: 70vh;
+    
     object-fit: contain;
-    border:solid black 2px;
+    border-radius: 0.28rem;
+    border: solid black 2px;
     box-sizing: border-box;
     margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
 .internship-certificate:hover {
-transform: scale(1.01);
+    transform: scale(1.01);
 }
 
-@media (max-width: 768px) {
+/* Mobile devices */
+@media screen and (max-width: 768px) {
     .internship-certificate {
+        display: block;
+        width: 100%;
         max-width: 100%;
-        max-height: none;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
+        margin: 15px auto;
+    }
+
+    .internship-certificate:hover {
+        transform: none;
     }
 }
