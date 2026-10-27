@@ -28,8 +28,9 @@ return (
                      animate={{opacity:1,y:0}}
                      transition={{duration:1}}
                       >
+                        <Panel>
             <img src="https://media.licdn.com/dms/image/v2/D562DAQEomPWbhuVbmw/profile-treasury-image-shrink_1280_1280/B56aF.9fIsIAAY-/0/1793131411393?e=1793739600&v=beta&t=sxS3eDJ6_J8NUf6WvlfooNQTkYOKsAQBCYpv0wh20Ak" className="internship-certificate"/>
-             
+             </Panel>
              </motion.div>
              <div className="card">
                         <br></br>
