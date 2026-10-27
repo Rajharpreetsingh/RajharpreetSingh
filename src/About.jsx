@@ -34,11 +34,11 @@ export default function TemplateDemo() {
          <motion.div 
          initial={{opacity:0}}
          animate={{opacity:1}}
-         transition={{duration:2}}
+         transition={{duration:3}}
           >
          <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center"}}>
              <motion.div 
-         initial={{opacity:0,y:-200}}
+         initial={{opacity:0,y:-30}}
          animate={{opacity:1,y:0}}
          transition={{duration:1}}
           >
