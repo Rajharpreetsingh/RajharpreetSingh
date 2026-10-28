@@ -2,6 +2,7 @@
 import React from 'react';
 import { BlockUI } from 'primereact/blockui';
 import PageTransition from './PageTransition';
+import pr from "./images/profile.jpeg";
 import "./Styles/About.css";
 import {motion} from "motion/react";
 import { Panel } from 'primereact/panel';
@@ -38,12 +39,12 @@ export default function TemplateDemo() {
           >
          <div style={{display:"flex" , justifyContent:"center" ,alignItems:"center"}}>
              <motion.div 
-         initial={{opacity:0,y:-30}}
+         initial={{opacity:0,y:-200}}
          animate={{opacity:1,y:0}}
          transition={{duration:1}}
           >
           
-              <img src="https://media.licdn.com/dms/image/v2/D5603AQF-87kZiQ_6cQ/profile-displayphoto-crop_800_800/B56aF8DrrSHQAI-/0/1793082703619?e=1794441600&v=beta&t=GTaOxCRWgBNDBqcpk4HM_iTwP1fr62oTRSE6PYgDGkc" style={{borderRadius:"8rem",width:"8",height:"10rem",border:"solid 3px black",marginTop:"2rem",boxShadow:"2pxblack"}} className="pim">
+              <img src={pr} style={{borderRadius:"50%",width:"15rem",height:"16rem",border:"solid 3px black",marginTop:"1rem",boxShadow:"2pxblack"}} className="pim">
               </img>
               </motion.div>
 
