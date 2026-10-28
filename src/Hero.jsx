@@ -75,7 +75,7 @@ export default function HeroSection() {
               onClick={()=>navigate("/certifications")} 
               className="btns"
             />
-            <a href="https://drive.google.com/file/d/1FhjrNPzbKgzpM2D_2kwDi8F5EkbjEU61/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1zsYuQZIvctRkScM6fxD6CZtL_cN44QkT/view?usp=sharing">
             <Button 
               label="Download CV" 
               icon="pi pi-external-link" 
